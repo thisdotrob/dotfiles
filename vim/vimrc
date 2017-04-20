@@ -1,0 +1,17 @@
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+set number
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'jaxbot/semantic-highlight.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+call vundle#end()            " required
+filetype plugin indent on    " required
