@@ -1,5 +1,8 @@
 "*":
   core:
+    packagesWithKeymapsDisabled: [
+      "mocha-fold"
+    ]
     telemetryConsent: "no"
   editor:
     preferredLineLength: 120
