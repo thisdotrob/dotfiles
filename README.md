@@ -36,13 +36,39 @@
    source ~/.zshrc
    ```
 
-1. Stop the 'last login' message displaying when opening a new terminal window:
-   ```sh
-   touch ~/.hushlogin
-   ```
-
 1. Install z:
    ```sh
    git clone git@github.com:rupa/z.git ~/z && echo ". ~/z/z.sh" >> ~/.zshrc
    source ~/.zshrc
+   ```
+
+1. Install vim:
+   ```sh
+   brew install vim
+   ```
+
+1. Install vim-plug:
+   ```sh
+   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+   ```
+
+1. Install atom:
+   ```sh
+   brew cask install atom
+   ```
+
+1. Install atom packages:
+   ```sh
+   ./installatomdeps.sh
+   ```
+
+1. Symlink config files:
+   ```sh
+   ./makesymlinks.sh
+   ```
+
+1. Install docker:
+   ```sh
+   brew cask install docker
    ```

@@ -1,3 +1,2 @@
 '.workspace':
   'ctrl-alt-o': 'node-resolver:open-selected-dependencies'
-  'ctrl-alt-i': 'mocha-fold:fold'
