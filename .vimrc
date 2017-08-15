@@ -20,9 +20,9 @@ Plug 'honza/vim-snippets'
 Plug 'Raimondi/delimitMate'
 Plug 'vim-airline/vim-airline'
 Plug 'rakr/vim-one'
-Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'posva/vim-vue'
+Plug 'nazo/pt.vim'
 call plug#end()
 colorscheme one
 set background=dark
@@ -37,7 +37,7 @@ nnoremap <C-H> <C-W><C-H>
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeQuitOnOpen = 1
-let g:ale_fixers = { 'javascript': ['eslint'] }
+let g:ale_fixers = { 'javascript': ['eslint'], 'vue': ['eslint'] }
 let g:tern_map_keys=1
 let g:tern_show_argument_hints='on_hold'
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -47,8 +47,3 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:delimitMate_expand_cr=2
 let g:delimitMate_expand_space=2
 let g:airline_theme='one'
-let g:ackprg = 'ag --vimgrep --smart-case'                                                   
-cnoreabbrev ag Ack                                                                           
-cnoreabbrev aG Ack                                                                           
-cnoreabbrev Ag Ack                                                                           
-cnoreabbrev AG Ack
