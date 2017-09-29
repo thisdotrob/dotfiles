@@ -89,17 +89,10 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 . ~/z/z.sh
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
-eval 
-            fuck () {
-                TF_PREVIOUS=$(fc -ln -1 | tail -n 1);
-                TF_CMD=$(
-                    TF_ALIAS=fuck
-                    TF_SHELL_ALIASES=$(alias)
-                    PYTHONIOENCODING=utf-8
-                    thefuck $TF_PREVIOUS THEFUCK_ARGUMENT_PLACEHOLDER $*
-                ) && eval $TF_CMD;
-                test -n "$TF_CMD" && print -s $TF_CMD
-            }
-        
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+docker-purge() {
+  docker container rm -f $(docker container ls -a -q);
+  docker image rm -f $(docker image ls -q);
+  docker volume rm $(docker volume ls -q);
+  docker network rm $(docker network ls -q);
+}
