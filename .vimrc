@@ -29,6 +29,8 @@ call plug#end()
 colorscheme one
 set background=dark
 autocmd FileType javascript SemanticHighlight
+autocmd FileType javascript autocmd TextChanged * SemanticHighlight
+autocmd FileType javascript autocmd TextChangedI * SemanticHighlight
 nnoremap <Leader>f :NERDTreeToggle<Enter>
 nnoremap <Leader>b :buffers<CR>:buffer<Space>
 nnoremap <Leader>l :ALEFix<Enter>
