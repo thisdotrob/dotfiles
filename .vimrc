@@ -4,6 +4,7 @@ set shiftwidth=2
 set softtabstop=2
 set noswapfile
 set relativenumber
+set number
 set clipboard=unnamed
 set termguicolors
 set nowrap
@@ -23,6 +24,7 @@ Plug 'rakr/vim-one'
 Plug 'scrooloose/nerdcommenter'
 Plug 'posva/vim-vue'
 Plug 'nazo/pt.vim'
+Plug 'mileszs/ack.vim'
 call plug#end()
 colorscheme one
 set background=dark
