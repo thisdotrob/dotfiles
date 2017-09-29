@@ -9,6 +9,8 @@ export ZSH=/Users/robstevenson/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="TheOne"
 
+RPROMPT="[%D{%y/%m/%f}|%@]"
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
