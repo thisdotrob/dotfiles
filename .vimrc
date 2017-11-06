@@ -20,17 +20,12 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'Raimondi/delimitMate'
 Plug 'vim-airline/vim-airline'
-Plug 'rakr/vim-one'
 Plug 'scrooloose/nerdcommenter'
-Plug 'posva/vim-vue'
-Plug 'nazo/pt.vim'
 Plug 'mileszs/ack.vim'
+Plug 'dracula/vim'
 call plug#end()
-colorscheme one
-set background=dark
+color dracula
 autocmd FileType javascript SemanticHighlight
-autocmd FileType javascript autocmd TextChanged * SemanticHighlight
-autocmd FileType javascript autocmd TextChangedI * SemanticHighlight
 nnoremap <Leader>f :NERDTreeToggle<Enter>
 nnoremap <Leader>b :buffers<CR>:buffer<Space>
 nnoremap <Leader>l :ALEFix<Enter>
@@ -50,4 +45,4 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:delimitMate_expand_cr=2
 let g:delimitMate_expand_space=2
-let g:airline_theme='one'
+let g:airline_theme='dracula'
