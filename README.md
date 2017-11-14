@@ -7,6 +7,15 @@
    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
    ```
 
+1. Install iTerm:
+  ```
+  brew cask install iterm2
+  ```
+
+1. Close terminal and open iTerm
+
+1. Set iTerm theme to dracula per [these instructions](https://draculatheme.com/iterm/).
+
 1. Install zsh
    ```sh
    brew install zsh
@@ -22,7 +31,7 @@
    chsh -s /usr/local/bin/zsh
    ```
 
-1. Restart terminal to start using zsh. Choose 'q' when presented with the zsh new user configuration.
+1. Restart iTerm to start using zsh. Choose 'q' when presented with the zsh new user configuration.
 
 1. Install oh-my-zsh:
    ```sh
@@ -53,10 +62,14 @@
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
    ```
 
+1. Open vim and run ```:PlugInstall```.
+
 1. Install atom:
    ```sh
    brew cask install atom
    ```
+
+1. Start atom and close it again.
 
 1. Install atom packages:
    ```sh
@@ -72,3 +85,8 @@
    ```sh
    brew cask install docker
    ```
+
+1. Install chrome:
+    ```sh
+    brew cask install google-chrome
+    ```
