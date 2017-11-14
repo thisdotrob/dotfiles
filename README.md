@@ -63,6 +63,11 @@
 
 1. Open vim and run ```:PlugInstall```.
 
+1. Install Ack:
+   ```
+   brew install ack
+   ```
+
 1. Install atom:
    ```sh
    brew cask install atom
