@@ -10,6 +10,7 @@ set termguicolors
 set nowrap
 set splitright
 set splitbelow
+set foldmethod=indent
 call plug#begin()
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
@@ -21,6 +22,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mileszs/ack.vim'
 Plug 'dracula/vim'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 color dracula
 nnoremap <Leader>f :NERDTreeToggle<Enter>
@@ -41,3 +43,4 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:delimitMate_expand_cr=2
 let g:delimitMate_expand_space=2
 let g:airline_theme='dracula'
+autocmd BufWinEnter * silent! :%foldopen!
