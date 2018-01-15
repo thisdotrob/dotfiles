@@ -23,6 +23,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'mileszs/ack.vim'
 Plug 'dracula/vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
 call plug#end()
 color dracula
 nnoremap <Leader>f :NERDTreeToggle<Enter>
