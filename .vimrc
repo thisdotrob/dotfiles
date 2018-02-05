@@ -45,4 +45,5 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:delimitMate_expand_cr=2
 let g:delimitMate_expand_space=2
 let g:airline_theme='dracula'
+let g:ackprg = 'ag --vimgrep'
 autocmd BufWinEnter * silent! :%foldopen!
