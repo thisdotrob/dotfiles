@@ -24,6 +24,7 @@ Plug 'mileszs/ack.vim'
 Plug 'dracula/vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 color dracula
 nnoremap <Leader>f :NERDTreeToggle<Enter>
