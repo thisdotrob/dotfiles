@@ -3,8 +3,6 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set noswapfile
-set relativenumber
-set number
 set clipboard=unnamed
 set termguicolors
 set nowrap
@@ -47,3 +45,9 @@ let g:delimitMate_expand_space=2
 let g:airline_theme='dracula'
 let g:ackprg = 'ag --vimgrep'
 autocmd BufWinEnter * silent! :%foldopen!
+:set number relativenumber
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
