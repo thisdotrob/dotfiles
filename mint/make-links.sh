@@ -12,6 +12,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 mkdir -p ~/.config/i3
 mkdir -p ~/.config/i3status
 
+ln -sf "$(pwd)/gitconfig" ~/.gitconfig
 ln -sf "$(pwd)/zshrc" ~/.zshrc
 ln -sf "$(pwd)/vimrc" ~/.vimrc
 ln -sf "$(pwd)/i3config" ~/.config/i3/config
