@@ -5,6 +5,8 @@ apt add-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
 
 apt update
 
+apt upgrade
+
 apt install zsh vim-gtk3 curl i3-wm i3status tmux htop libanyevent-i3-perl jq docker-ce
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
