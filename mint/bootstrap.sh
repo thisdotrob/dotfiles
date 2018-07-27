@@ -9,7 +9,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add
 
 sudo apt install -y apt-transport-https ca-certificates software-properties-common curl
 
-sudo apt install -y docker-ce
+sudo apt install -y docker.io
 
 sudo usermod -aG docker $USER
 
@@ -36,3 +36,5 @@ ln -sf "$(pwd)/zshrc" ~/.zshrc
 ln -sf "$(pwd)/vimrc" ~/.vimrc
 ln -sf "$(pwd)/i3config" ~/.config/i3/config
 ln -sf "$(pwd)/i3statusconfig" ~/.config/i3status/config
+
+chsh -s /bin/zsh

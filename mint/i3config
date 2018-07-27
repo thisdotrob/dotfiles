@@ -30,7 +30,7 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec i3-sensible-terminal
 
 # start a browser
 bindsym $mod+F2 exec chromium-browser
