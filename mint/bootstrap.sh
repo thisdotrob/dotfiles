@@ -28,7 +28,7 @@ sudo rm -rf /tmp/pure
 ln -sf "$(pwd)/zshrc" ~/.zshrc
 
 # i3
-sudo apt install -y i3-wm i3status dmenu nm-applet libanyevent-i3-perl
+sudo apt install -y i3-wm i3status dmenu libanyevent-i3-perl
 mkdir -p ~/.config/i3
 mkdir -p ~/.config/i3status
 ln -sf "$(pwd)/i3config" ~/.config/i3/config
@@ -37,9 +37,9 @@ ln -sf "$(pwd)/i3statusconfig" ~/.config/i3status/config
 # vim
 sudo apt install -y vim-gtk3
 ln -sf "$(pwd)/vimrc" ~/.vimrc
-mkdir -p "~/.vim/pack/$USER/start"
+mkdir -p ~/.vim/pack/$USER
 git submodule init
-ln -sf "$(pwd)/../vim-plugins" "~/.vim/pack/$USER/start"
+ln -sf "$(pwd)/../vim-plugins" ~/.vim/pack/$USER/start
 
 # apps
 sudo apt install -y tmux htop jq chromium-browser
