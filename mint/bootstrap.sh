@@ -6,6 +6,8 @@ sudo apt upgrade -y
 # git
 sudo apt install -y git
 ln -sf "$(pwd)/gitconfig" ~/.gitconfig
+mkdir ~/.ssh
+cp "$(pwd)/../id_rsa.pub" ~/.ssh/id_rsa.pub
 
 # docker
 sudo apt add-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
