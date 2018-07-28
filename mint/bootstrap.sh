@@ -40,9 +40,11 @@ ln -sf "$(pwd)/i3statusconfig" ~/.config/i3status/config
 # vim
 sudo apt install -y vim-gtk3
 ln -sf "$(pwd)/vimrc" ~/.vimrc
-mkdir -p ~/.vim/pack/$USER
+mkdir -p ~/.vim/pack/$USER/start
 git submodule init
-ln -sf "$(pwd)/../vim-plugins" ~/.vim/pack/$USER/start
+ln -sf "$(pwd)/../vim-plugins/ctrlp" ~/.vim/pack/$USER/start/ctrlp
+ln -sf "$(pwd)/../vim-plugins/vim-airline" ~/.vim/pack/$USER/start/vim-airline
+ln -sf "$(pwd)/../vim-plugins/vim-surround" ~/.vim/pack/$USER/start/vim-surround
 
 # apps
 sudo apt install -y tmux htop jq chromium-browser
