@@ -153,5 +153,6 @@ bar {
 }
 
 exec --no-startup-id xrandr --dpi 192
+exec --no-startup-id gxkb
 
 new_window 1pixel
