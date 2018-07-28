@@ -47,4 +47,7 @@ ln -sf "$(pwd)/../vim-plugins" ~/.vim/pack/$USER/start
 # apps
 sudo apt install -y tmux htop jq chromium-browser
 
+# nvm
+git clone https://github.com/creationix/nvm.git ~/.nvm
+
 chsh -s /bin/zsh
