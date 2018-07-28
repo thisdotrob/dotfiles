@@ -3,6 +3,9 @@
 sudo apt update
 sudo apt upgrade -y
 
+chmod +x "$(pwd)/backlight.sh"
+sudo ln -sf "$(pwd)/backlight.sh" /usr/local/bin/backlight
+
 # git
 sudo apt install -y git
 ln -sf "$(pwd)/gitconfig" ~/.gitconfig
