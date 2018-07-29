@@ -49,7 +49,7 @@ ln -sf "$(pwd)/../vim-plugins/vim-airline" ~/.vim/pack/$USER/start/vim-airline
 ln -sf "$(pwd)/../vim-plugins/vim-surround" ~/.vim/pack/$USER/start/vim-surround
 
 # apps
-sudo apt install -y tmux htop jq chromium-browser
+sudo apt install -y tmux htop jq chromium-browser pavucontrol
 
 # nvm
 git clone https://github.com/creationix/nvm.git ~/.nvm
