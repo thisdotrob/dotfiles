@@ -6,7 +6,9 @@ sudo apt upgrade -y
 # hardware
 chmod +x "$(pwd)/backlight.sh"
 sudo ln -sf "$(pwd)/backlight.sh" /usr/local/bin/backlight
-sudo ln -sf "$(pwd)/gxkbconfig" ~/.config/gxkb/gxkb.cfg
+sudo apt install gxkb
+mkdir -p ~/.config/gxkb
+ln -sf "$(pwd)/gxkbconfig" ~/.config/gxkb/gxkb.cfg
 
 # git
 sudo apt install -y git
