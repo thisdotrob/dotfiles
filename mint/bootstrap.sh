@@ -62,4 +62,8 @@ rm /tmp/terraform.zip
 # nvm
 git clone https://github.com/creationix/nvm.git ~/.nvm
 
+# java
+sudo apt install openjdk-8-jdk
+sudo update-java-alternatives --set /usr/lib/jvm/java-1.8.0-openjdk-amd64
+
 chsh -s /bin/zsh
