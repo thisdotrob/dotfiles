@@ -51,6 +51,11 @@ ln -sf "$(pwd)/../vim-plugins/vim-surround" ~/.vim/pack/$USER/start/vim-surround
 # apps
 sudo apt install -y tmux htop jq chromium-browser pavucontrol
 
+# terraform
+curl -L https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_linux_amd64.zip -o /tmp/terraform.zip
+sudo unzip /tmp/terraform.zip -d /usr/local/bin/
+rm /tmp/terraform.zip
+
 # nvm
 git clone https://github.com/creationix/nvm.git ~/.nvm
 
