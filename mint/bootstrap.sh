@@ -10,6 +10,12 @@ sudo apt install gxkb
 mkdir -p ~/.config/gxkb
 ln -sf "$(pwd)/gxkbconfig" ~/.config/gxkb/gxkb.cfg
 
+# slack
+curl https://downloads.slack-edge.com/linux_releases/slack-desktop-3.2.1-amd64.deb -o /tmp/slack.deb
+sudo dpkg -i /tmp/slack.deb
+sudo apt install --fix-broken
+rm /tmp/slack.deb
+
 # git
 sudo apt install -y git
 ln -sf "$(pwd)/gitconfig" ~/.gitconfig
