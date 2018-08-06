@@ -1,5 +1,6 @@
 set nowrap
 set noshowmode
+set expandtab
 
 "https://jeffkreeftmeijer.com/vim-number/
 :set number relativenumber
@@ -12,3 +13,6 @@ set noshowmode
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 filetype plugin indent on
+
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+autocmd FileType json setlocal shiftwidth=2 tabstop=2
