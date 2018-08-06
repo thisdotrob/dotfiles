@@ -10,11 +10,14 @@ sudo apt install gxkb
 mkdir -p ~/.config/gxkb
 ln -sf "$(pwd)/gxkbconfig" ~/.config/gxkb/gxkb.cfg
 
-# slack
+# slack & zoom
 curl https://downloads.slack-edge.com/linux_releases/slack-desktop-3.2.1-amd64.deb -o /tmp/slack.deb
+curl -L https://zoom.us/client/latest/zoom_amd64.deb -o /tmp/zoom.deb
 sudo dpkg -i /tmp/slack.deb
+sudo dpkg -i /tmp/zoom.deb
 sudo apt install --fix-broken
 rm /tmp/slack.deb
+rm /tmp/zoom.deb
 
 # git
 sudo apt install -y git
