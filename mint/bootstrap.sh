@@ -19,6 +19,10 @@ sudo apt install --fix-broken
 rm /tmp/slack.deb
 rm /tmp/zoom.deb
 
+# tmux
+sudo apt install -y tmux
+ln -sf "$(pwd)/tmuxconfig" ~/.tmux.conf
+
 # git
 sudo apt install -y git
 ln -sf "$(pwd)/gitconfig" ~/.gitconfig
