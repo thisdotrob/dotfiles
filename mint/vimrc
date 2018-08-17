@@ -1,6 +1,9 @@
 set nowrap
 set noshowmode
 set expandtab
+set list
+set listchars=trail:·,tab:▸\
+set bg=dark
 
 "https://jeffkreeftmeijer.com/vim-number/
 :set number relativenumber
