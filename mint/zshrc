@@ -64,6 +64,7 @@ ZSH_THEME=""
 plugins=(
   git
   dotenv
+  npm
 )
 
 source $ZSH/oh-my-zsh.sh
