@@ -54,6 +54,7 @@ mkdir -p ~/.config/i3
 mkdir -p ~/.config/i3status
 ln -sf "$(pwd)/i3config" ~/.config/i3/config
 ln -sf "$(pwd)/i3statusconfig" ~/.config/i3status/config
+ln -sf "$(pwd)/profile" ~/.profile
 
 # vim
 sudo apt install -y vim-gtk3
