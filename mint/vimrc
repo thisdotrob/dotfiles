@@ -19,3 +19,5 @@ filetype plugin indent on
 
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 autocmd FileType json setlocal shiftwidth=2 tabstop=2
+
+map <C-n> :NERDTreeToggle<CR>
