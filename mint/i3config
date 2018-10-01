@@ -166,5 +166,6 @@ bar {
 
 exec --no-startup-id xrandr --dpi 192
 exec --no-startup-id gxkb
+exec --no-startup-id blueberry-tray
 
 new_window 1pixel
