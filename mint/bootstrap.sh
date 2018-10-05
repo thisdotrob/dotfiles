@@ -25,6 +25,7 @@ ln -sf "$(pwd)/tmuxconfig" ~/.tmux.conf
 
 # git
 sudo apt install -y git
+sudo ln -sf "$(pwd)/gstgcl" /usr/bin/gstgcl
 ln -sf "$(pwd)/gitconfig" ~/.gitconfig
 mkdir ~/.ssh
 cp "$(pwd)/../id_rsa.pub" ~/.ssh/id_rsa.pub
