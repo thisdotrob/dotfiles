@@ -71,7 +71,7 @@ ln -sf "$(pwd)/../vim-plugins/nerdtree" ~/.vim/pack/$USER/start/nerdtree
 sudo apt install -y tmux htop jq chromium-browser pavucontrol
 
 # terraform
-curl -L https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_linux_amd64.zip -o /tmp/terraform.zip
+curl -L https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip -o /tmp/terraform.zip
 sudo unzip /tmp/terraform.zip -d /usr/local/bin/
 rm /tmp/terraform.zip
 
