@@ -1,17 +1,10 @@
+set number
 set nowrap
 set noshowmode
 set expandtab
 set list
 set listchars=trail:·,tab:▸\
 set bg=dark
-
-"https://jeffkreeftmeijer.com/vim-number/
-:set number relativenumber
-:augroup numbertoggle
-:  autocmd!
-:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-:augroup END
 
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
