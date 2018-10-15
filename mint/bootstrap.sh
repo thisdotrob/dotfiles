@@ -70,6 +70,13 @@ ln -sf "$(pwd)/../vim-plugins/nerdtree" ~/.vim/pack/$USER/start/nerdtree
 # apps
 sudo apt install -y tmux htop jq chromium-browser pavucontrol
 
+# aws cli
+unzip awscli-bundle.zip
+curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+rm -rf awscli-bundle
+rm awscli-bundle.zip
+
 # terraform
 curl -L https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip -o /tmp/terraform.zip
 sudo unzip /tmp/terraform.zip -d /usr/local/bin/
