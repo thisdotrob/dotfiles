@@ -3,6 +3,9 @@
 sudo apt update
 sudo apt upgrade -y
 
+# compton compositor to stop screen tearing
+sudo apt install compton
+
 # hardware
 chmod +x "$(pwd)/backlight.sh"
 sudo ln -sf "$(pwd)/backlight.sh" /usr/local/bin/backlight

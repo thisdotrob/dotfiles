@@ -10,3 +10,6 @@
 [submodule "vim-plugins/nerdtree"]
 	path = vim-plugins/nerdtree
 	url = https://github.com/scrooloose/nerdtree
+[submodule "vim-plugins/vim-fireplace"]
+	path = vim-plugins/vim-fireplace
+	url = https://github.com/scrooloose/nerdtree

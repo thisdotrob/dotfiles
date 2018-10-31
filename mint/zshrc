@@ -106,3 +106,6 @@ prompt pure
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+alias rotate-right='xrandr -o right && xinput set-prop 14 145 0 1 0 -1 0 1 0 0 1 && xinput set-prop 13 145 0 1 0 -1 0 1 0 0 1'
+alias rotate-normal='xrandr -o normal && xinput set-prop 14 145 1 0 0 0 1 0 0 0 1 && xinput set-prop 13 145 1 0 0 0 1 0 0 0 1'
