@@ -13,3 +13,6 @@
 [submodule "vim-plugins/vim-fireplace"]
 	path = vim-plugins/vim-fireplace
 	url = https://github.com/tpope/vim-fireplace
+[submodule "vim-plugins/vim-commentary"]
+	path = vim-plugins/vim-commentary
+	url = https://github.com/tpope/vim-commentary
