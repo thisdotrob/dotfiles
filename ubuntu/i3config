@@ -1,6 +1,3 @@
-#exec --no-startup-id xrandr --output eDP-1 --off
-exec --no-startup-id xrandr --dpi 192
-
 # Remove title bars
 new_window 1pixel
 
@@ -174,3 +171,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+exec --no-startup-id sleep 5 && xrandr --dpi 192
+exec --no-startup-id gxkb

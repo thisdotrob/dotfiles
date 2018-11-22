@@ -1,20 +1,26 @@
-#!/bin/bash
+!/bin/bash
 
 sudo apt update
 sudo apt upgrade -y
 
+sudo apt autoremove -y
+
 sudo apt install -y chromium-browser curl pavucontrol tmux vim zsh \
-                    zsh-syntax-highlighting apt-transport-https ca-certificates
-                    software-properties-common openjdk-8-jdk
+                    zsh-syntax-highlighting apt-transport-https ca-certificates \
+                    software-properties-common openjdk-8-jdk make gxkb
+
+# keyboard
+mkdir -p ~/.config/gxkb
+ln -sf "$(pwd)/gxkbconfig" ~/.config/gxkb/gxkb.cfg
 
 # git
 ln -sf "$(pwd)/gitconfig" ~/.gitconfig
-cp "$(pwd)/../id_rsa.pub" ~/.ssh/id_rsa.pub
+ln -sf "$(pwd)/../id_rsa.pub" ~/.ssh/id_rsa.pub
 
 # zoom
 curl -L "https://zoom.us/client/latest/zoom_amd64.deb" -o /tmp/zoom.deb
 sudo dpkg -i /tmp/zoom.deb
-sudo apt install --fix-broken
+sudo apt install --fix-broken -y
 rm /tmp/zoom.deb
 
 # shell & term
@@ -30,20 +36,32 @@ chmod +x "$(pwd)/backlight.sh"
 sudo ln -sf "$(pwd)/backlight.sh" /usr/local/bin/backlight
 
 # i3
+/usr/lib/apt/apt-helper download-file \
+        "http://debian.sur5r.net/i3/pool/main/s/sur5r-keyring/sur5r-keyring_2018.01.30_all.deb" \
+        keyring.deb \
+        SHA256:baa43dbbd7232ea2b5444cae238d53bebb9d34601cc000e82f11111b1889078a
+sudo dpkg -i ./keyring.deb
+sudo sh -c 'echo "deb http://debian.sur5r.net/i3/ cosmic universe" >> /etc/apt/sources.list.d/sur5r-i3.list'
+sudo apt update
+sudo apt install i3 -y
+mkdir ~/.config/i3
 ln -sf "$(pwd)/i3config" ~/.config/i3/config
 ln -sf "$(pwd)/profile" ~/.profile
+ln -sf "$(pwd)/dunstrc" ~/.dunstrc
+rm keyring.deb
 
 # atom
 curl -L "https://atom-installer.github.com/v1.32.1/atom-amd64.deb?s=1540946396&ext=.deb" \
      -o /tmp/atom.deb
 sudo dpkg -i /tmp/atom.deb
+sudo apt install --fix-broken -y
 rm /tmp/atom.deb
 
 # slack
 curl -L "https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.3-amd64.deb" \
      -o /tmp/slack.deb
 sudo dpkg -i /tmp/slack.deb
-sudo apt install --fix-broken
+sudo apt install --fix-broken -y
 rm /tmp/slack.deb
 # Slack is broken, use libnode.so from Atom to fix per
 # http://ubuntuhandbook.org/index.php/2018/11/slack-app-not-launching-ubuntu-18-10/
@@ -53,7 +71,7 @@ sudo cp /usr/share/atom/libnode.so /usr/lib/slack/libnode.so
 # vim
 ln -sf "$(pwd)/vimrc" ~/.vimrc
 mkdir -p ~/.vim/pack/$USER/start
-git submodule init
+git submodule update
 ln -sf "$(pwd)/../vim-plugins/ctrlp" ~/.vim/pack/$USER/start/ctrlp
 ln -sf "$(pwd)/../vim-plugins/vim-airline" ~/.vim/pack/$USER/start/vim-airline
 ln -sf "$(pwd)/../vim-plugins/vim-surround" ~/.vim/pack/$USER/start/vim-surround
@@ -79,14 +97,14 @@ sudo chmod +x /usr/local/bin/docker-compose
 curl -o- "https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh" | bash
 
 # aws cli
-curl -L "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o /tmp/awscli-bundle.zip
-unzip /tmp/awscli-bundle.zip
-sudo /tmp/awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
-rm -rf /tmp/awscli-bundle
-rm /tmp/awscli-bundle.zip
+curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+unzip awscli-bundle.zip
+sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+rm -rf awscli-bundle
+rm awscli-bundle.zip
 
 # terraform
-curl -L "https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip" \
+curl -L "https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip" \
      -o /tmp/terraform.zip
 sudo unzip /tmp/terraform.zip -d /usr/local/bin/
 rm /tmp/terraform.zip
@@ -99,8 +117,9 @@ curl -L "https://download.clojure.org/install/linux-install-1.9.0.397.sh" -o /tm
 chmod +x /tmp/clojure.sh
 sudo /tmp/clojure.sh
 rm /tmp/clojure.sh
-sudo curl -L "https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein" -o ~/bin/lein
-chmod a+x ~/bin/lein
-lein
+sudo curl -L "https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein" \
+          -o /usr/local/bin/lein
+sudo chmod a+x /usr/local/bin/lein
+/usr/local/bin/lein
 
 chsh -s /bin/zsh
