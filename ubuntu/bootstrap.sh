@@ -7,7 +7,7 @@ sudo apt autoremove -y
 
 sudo apt install -y chromium-browser curl pavucontrol tmux vim zsh \
                     zsh-syntax-highlighting apt-transport-https ca-certificates \
-                    software-properties-common openjdk-8-jdk make gxkb
+                    software-properties-common openjdk-8-jdk make gxkb jq
 
 # keyboard
 mkdir -p ~/.config/gxkb
