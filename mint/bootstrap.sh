@@ -62,7 +62,7 @@ ln -sf "$(pwd)/profile" ~/.profile
 
 # vim
 sudo apt install -y vim-gtk3
-ln -sf "$(pwd)/vimrc" ~/.vimrc
+ln -sf "$(pwd)/../debian/vimrc" ~/.vimrc
 mkdir -p ~/.vim/pack/$USER/start
 git submodule init
 ln -sf "$(pwd)/../vim-plugins/ctrlp" ~/.vim/pack/$USER/start/ctrlp
@@ -94,5 +94,15 @@ git clone https://github.com/creationix/nvm.git ~/.nvm
 # java
 sudo apt install openjdk-8-jdk
 sudo update-java-alternatives --set /usr/lib/jvm/java-1.8.0-openjdk-amd64
+
+# clojure
+curl -L "https://download.clojure.org/install/linux-install-1.9.0.397.sh" -o /tmp/clojure.sh
+chmod +x /tmp/clojure.sh
+sudo /tmp/clojure.sh
+rm /tmp/clojure.sh
+sudo curl -L "https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein" \
+          -o /usr/local/bin/lein
+sudo chmod a+x /usr/local/bin/lein
+/usr/local/bin/lein
 
 chsh -s /bin/zsh

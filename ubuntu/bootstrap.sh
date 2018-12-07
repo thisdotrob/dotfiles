@@ -69,7 +69,7 @@ sudo rm /usr/lib/slack/libnode.so
 sudo cp /usr/share/atom/libnode.so /usr/lib/slack/libnode.so
 
 # vim
-ln -sf "$(pwd)/vimrc" ~/.vimrc
+ln -sf "$(pwd)/../debian/vimrc" ~/.vimrc
 mkdir -p ~/.vim/pack/$USER/start
 git submodule update
 ln -sf "$(pwd)/../vim-plugins/ctrlp" ~/.vim/pack/$USER/start/ctrlp
